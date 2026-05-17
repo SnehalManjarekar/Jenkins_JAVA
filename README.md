@@ -23,27 +23,25 @@ The pipeline automatically:
 ---
 
 # Project Structure
- Project Folder │
+Project Folder
 ├── pom.xml
-├── src
-│   ├── test
-│   │   ├── java
-│   │   │   ├── base
-│   │   │   │   └── BaseClass.java
-│   │   │   ├── pages
-│   │   │   │   └── LoginPage.java
-│   │   │   ├── runner
-│   │   │   │   └── TestRunner.java
-│   │   │   └── steps
-│   │   │       └── LoginSteps.java
-│   │   │
-│   │   └── resources
-│   │       └── features
-│   │           └── Login Functionality.feature
-│
-└── target
 ├── Jenkinsfile
-└── README.md
+├── README.md
+├── src
+│   └── test
+│       ├── java
+│       │   ├── base
+│       │   │   └── BaseClass.java
+│       │   ├── pages
+│       │   │   └── LoginPage.java
+│       │   ├── runner
+│       │   │   └── TestRunner.java
+│       │   └── steps
+│       │       └── LoginSteps.java
+│       └── resources
+│           └── features
+│               └── Login Functionality.feature
+└── target   (generated automatically after build)
 
 
 Selenium Test Scenarios
