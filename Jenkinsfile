@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/SnehalManjarekar/GrowAI_Cucumber_Selenium_Project.git'
+                git 'https://github.com/SnehalManjarekar/Jenkins_JAVA.git'
             }
         }
 
