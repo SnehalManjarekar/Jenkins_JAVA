@@ -89,7 +89,7 @@ public class LoginSteps extends baseClass {
 //         NOTE: Website actually shows:"Your username is invalid!" for blank login also.
 
         Assert.assertTrue(
-                message.contains("This field is required"),
+                message.contains("Your username is invalid!"),
                 "Blank Login Test Failed"
         );
 
