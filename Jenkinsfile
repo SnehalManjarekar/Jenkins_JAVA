@@ -9,19 +9,20 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/SnehalManjarekar/Jenkins_JAVA.git'
+                git branch: 'main',
+                    url: 'https://github.com/SnehalManjarekar/Jenkins_JAVA.git'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
     }
