@@ -1,19 +1,34 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
 
-        stage('Checkout') {
+        stage('Clone') {
             steps {
-                git branch: 'main',
-                url: 'https://github.com/SnehalManjarekar/Jenkins_JAVA.git'
+                git 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean compile'
             }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+    }
+
+    post {
+        always {
+            junit 'target/surefire-reports/*.xml'
         }
     }
 }
